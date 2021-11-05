@@ -24,6 +24,20 @@ Unofficial myCobot moveit repositiry to be run on a local pc for myCobot Pi
   git cloen -b mycobot-pi https://github.com/QibiTechInc/mycobot_ros.git
   ```
 4. build your local workspaces (catkin_make)
+5. Make sure that both the rpi and the PC are in the same network and they can see each other. 
+  * use the command `hostname -I` to get the IP of your local machine, and by using the command `ping THE_OTHER_MACHINE_IP` make sure that your local machines have access to each other. 
+  * On the PC run:
+    ```bash
+    export ROS_MASTER_URI=http://PC_IP_ADDRESS:11311
+    export ROS_IP=PC_IP_ADDRESS        
+    ```
+    Note that here PC_IP_ADDRESS is the address that you have received from `hostname -I` command
+  * On the rpi run:
+    ```bash
+    export ROS_MASTER_URI=http://PC_IP_ADDRESS:11311
+    export ROS_IP=RPI_IP_ADDRESS        
+    ```
+    Now you can run roscore on your PC, and the rpi should be able to launch any node without having roscore.
 # Usage
 Make sure both the PC and the rpi are running under the same ROS master. 
 First on rpi lunch:

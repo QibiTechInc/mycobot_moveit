@@ -13,7 +13,8 @@ int main(int argc, char **argv)
 	spinner.start();
 
 	ros::Time prev_time = ros::Time::now();
-	ros::Rate rate(10.0); // 10 Hz rate
+	// Making this loop faster is important for running MoveIt 
+	ros::Rate rate(100.0); // 10 Hz rate
 
 	while (ros::ok())
 	{
@@ -21,6 +22,7 @@ int main(int argc, char **argv)
 		const ros::Duration period = time - prev_time;
 
 		robot.read(time, period);
+		
 		cm.update(time, period);
 		robot.write(time, period);
 

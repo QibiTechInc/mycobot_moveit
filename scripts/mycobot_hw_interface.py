@@ -6,16 +6,12 @@ import rosparam
 from std_msgs.msg import Float32MultiArray
 from pymycobot.mycobot import MyCobot
 from pymycobot.genre import Angle
+from pymycobot import PI_PORT, PI_BAUD
 
 class MycobotHwInterface:
     def __init__(self):
-        port_str = rospy.get_param("/hardware_interface/mycobot_port", "default")
-        if port_str == "default":
-            port = subprocess.check_output(['echo -n /dev/ttyUSB*'], shell=True)
-        else:
-            port = subprocess.check_output(['echo -n ' + port_str], shell=True)
 
-        self.mycobot_ = MyCobot(port)
+        self.mycobot_ = MyCobot(PI_PORT, PI_BAUD)
         self.mycobot_.power_on()
 
         rospy.init_node('mycobot_hw_interface', anonymous=True)

@@ -8,7 +8,6 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   tf
-  moveit_ros_planning_interface
   hardware_interface
   transmission_interface
   controller_manager

@@ -10,22 +10,20 @@
     <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
     <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
     <group name="mycobot_arm">
-        <link name="base_link" />
-        <link name="body_link" />
-        <link name="arm1_link" />
-        <link name="arm2_link" />
-        <link name="arm3_link" />
-        <link name="arm4_link" />
-        <link name="arm5_link" />
-        <link name="arm6_link" />
-        <joint name="body_joint" />
+        <link name="joint1" />
+        <link name="joint2" />
+        <link name="joint3" />
+        <link name="joint4" />
+        <link name="joint5" />
+        <link name="joint6" />
+        <link name="joint6_flange" />
         <joint name="arm1_joint" />
         <joint name="arm2_joint" />
         <joint name="arm3_joint" />
         <joint name="arm4_joint" />
         <joint name="arm5_joint" />
         <joint name="arm6_joint" />
-        <chain base_link="base_link" tip_link="arm6_link" />
+        <chain base_link="joint1" tip_link="joint6_flange" />
     </group>
     <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
     <group_state name="init" group="mycobot_arm">
@@ -53,24 +51,25 @@
         <joint name="arm6_joint" value="0" />
     </group_state>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
-    <disable_collisions link1="arm1_link" link2="arm2_link" reason="Adjacent" />
-    <disable_collisions link1="arm1_link" link2="arm3_link" reason="Default" />
-    <disable_collisions link1="arm1_link" link2="arm4_link" reason="Default" />
-    <disable_collisions link1="arm1_link" link2="arm5_link" reason="Default" />
-    <disable_collisions link1="arm1_link" link2="arm6_link" reason="Never" />
-    <disable_collisions link1="arm1_link" link2="body_link" reason="Adjacent" />
-    <disable_collisions link1="arm2_link" link2="arm3_link" reason="Adjacent" />
-    <disable_collisions link1="arm2_link" link2="arm4_link" reason="Always" />
-    <disable_collisions link1="arm2_link" link2="arm5_link" reason="Always" />
-    <disable_collisions link1="arm2_link" link2="arm6_link" reason="Never" />
-    <disable_collisions link1="arm2_link" link2="body_link" reason="Default" />
-    <disable_collisions link1="arm3_link" link2="arm4_link" reason="Adjacent" />
-    <disable_collisions link1="arm3_link" link2="arm5_link" reason="Default" />
-    <disable_collisions link1="arm3_link" link2="arm6_link" reason="Never" />
-    <disable_collisions link1="arm3_link" link2="body_link" reason="Default" />
-    <disable_collisions link1="arm4_link" link2="arm5_link" reason="Adjacent" />
-    <disable_collisions link1="arm4_link" link2="arm6_link" reason="Never" />
-    <disable_collisions link1="arm4_link" link2="body_link" reason="Default" />
-    <disable_collisions link1="arm5_link" link2="arm6_link" reason="Adjacent" />
-    <disable_collisions link1="arm5_link" link2="body_link" reason="Default" />
+    <disable_collisions link1="joint1" link2="joint2" reason="Adjacent" />
+    <disable_collisions link1="joint1" link2="joint3" reason="Default" />
+    <disable_collisions link1="joint1" link2="joint4" reason="Default" />
+    <disable_collisions link1="joint1" link2="joint5" reason="Default" />
+    <disable_collisions link1="joint1" link2="joint6" reason="Never" />
+    <disable_collisions link1="joint1" link2="joint6_flange" reason="Adjacent" />
+    <disable_collisions link1="joint2" link2="joint3" reason="Adjacent" />
+    <disable_collisions link1="joint2" link2="joint4" reason="Always" />
+    <disable_collisions link1="joint2" link2="joint5" reason="Always" />
+    <disable_collisions link1="joint2" link2="joint6" reason="Never" />
+    <disable_collisions link1="joint2" link2="joint6_flange" reason="Default" />
+    <disable_collisions link1="joint3" link2="joint4" reason="Adjacent" />
+    <disable_collisions link1="joint3" link2="joint5" reason="Default" />
+    <disable_collisions link1="joint3" link2="joint6" reason="Never" />
+    <disable_collisions link1="joint3" link2="joint6_flange" reason="Default" />
+    <disable_collisions link1="joint4" link2="joint5" reason="Adjacent" />
+    <disable_collisions link1="joint4" link2="joint6" reason="Never" />
+    <disable_collisions link1="joint4" link2="joint6_flange" reason="Default" />
+    <disable_collisions link1="joint5" link2="joint6" reason="Adjacent" />
+    <disable_collisions link1="joint5" link2="joint6_flange" reason="Default" />
+    <disable_collisions link1="joint6" link2="joint6_flange" reason="Default" />
 </robot>

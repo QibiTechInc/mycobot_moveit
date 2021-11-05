@@ -35,10 +35,10 @@ class MycobotHwInterface:
 
     def joint_state_msg_sender(self):
         angles = self.mycobot_.get_radians()
-        print(angles)
+        #print(angles)
         for index, value in enumerate(angles):
             if index != 2:
-               value *= 1
+                value *= -1
             self.joint_state_array_[index] = value
         # str = "angles: %s" % angles
         # rospy.loginfo(str)
@@ -50,7 +50,7 @@ class MycobotHwInterface:
         data_list = []
         for index, value in enumerate(msg.data):
             if index != 2:
-                value *= 1
+                value *= -1
             data_list.append(value)
 
         if self.first_flag:

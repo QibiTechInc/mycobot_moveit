@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<launch>
+
+    <include file="$(find mycobot_280)/launch/mycobot.launch"/>
+    <!-- If it did not work the following 
+    <include file="$(find myCobotROS)/launch/mycobot.launch"/>
+    -->
+
+
+    <!-- HW Interface -->
+    <node name="hardware_interface" pkg="mycobot_moveit" type="mycobot_hw_interface.py" output="screen">
+    </node> 
+
+</launch>

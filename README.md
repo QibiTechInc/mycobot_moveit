@@ -28,11 +28,11 @@ Unofficial myCobot moveit repositiry to be run on a local pc for myCobot Pi
 Make sure both the PC and the rpi are running under the same ROS master. 
 First on rpi lunch:
 ```bash
-roslaunch mycobot_moveit mycobot_rpi_control_v2.launch`
+roslaunch mycobot_moveit mycobot_rpi_control_v2.launch
 ```
 On the PC launch: 
 ```bash
-roslaunch mycobot_moveit mycobot_moveit_control_master_v2.launch`
+roslaunch mycobot_moveit mycobot_moveit_control_master_v2.launch
 ```
 # License
 This software is released under the MIT License, see LICENSE.txt.

@@ -16,12 +16,15 @@ Unofficial myCobot moveit repositiry to be run on a local pc for myCobot Pi
 
 2. clone the pkg into your local catkin workspace (use the branch pc-pkg)
   ```bash
-  git clone -b pc-pkg https://github.com/QibiTechInc/mycobot_moveit.git
+    git clone -b  mycobot-pi https://github.com/QibiTechInc/mycobot_ros.git
+    git clone -b  pre-installed-pkg https://github.com/QibiTechInc/mycobot_ros.git
+    git clone -b pc-pkg https://github.com/QibiTechInc/mycobot_moveit.git
   ```
 3. On the rpi clone the following repositories
   ```bash
-  git clone -b rpi-pkg https://github.com/QibiTechInc/mycobot_moveit.git
-  git cloen -b mycobot-pi https://github.com/QibiTechInc/mycobot_ros.git
+    git clone -b  mycobot-pi https://github.com/QibiTechInc/mycobot_ros.git
+    git clone -b  pre-installed-pkg https://github.com/QibiTechInc/mycobot_ros.git
+    git clone -b rpi-pkg  https://github.com/QibiTechInc/mycobot_moveit.git
   ```
 4. build your local workspaces (catkin_make)
 5. Make sure that both the rpi and the PC are in the same network and they can see each other. 

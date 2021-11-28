@@ -5,7 +5,7 @@ Unofficial myCobot moveit repositiry to be run on a local pc for myCobot Pi
 | item |  |
 |---|---|
 | OS | Ubuntu 18.04 |
-| ROS | melodic/Noetic |
+| ROS | Melodic/Noetic |
 | Arm Robot | myCobot Pi |
 
 # Preparation

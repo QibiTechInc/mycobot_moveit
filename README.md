@@ -9,7 +9,7 @@ Unofficial myCobot moveit repositiry to be run on a local pc for myCobot Pi
 | Arm Robot | myCobot Pi |
 
 # Preparation
-1. Install Moveit in your lacal computer, for example for ros melodic:
+1. Install Moveit in your local computer, for example for ros melodic:
   ```bash
   sudo apt-get install ros-melodic-moveit
   ```

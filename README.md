@@ -1,6 +1,8 @@
 # mycobot_moveit
 Unofficial myCobot moveit repositiry to be run on a local raspberry Pi for myCobot Pi 
 
+This is a forked project of what is developed [here](https://github.com/nisshan-x/mycobot_moveit) to make myCobot Pi work with MoveIt
+
 # Environment
 | item |  |
 |---|---|

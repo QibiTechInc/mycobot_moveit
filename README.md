@@ -1,5 +1,5 @@
 # mycobot_moveit
-Unofficial myCobot moveit repositiry to be run on a local pc for myCobot Pi 
+Unofficial myCobot moveit repositiry to be run on a local raspberry Pi for myCobot Pi 
 
 # Environment
 | item |  |

@@ -50,5 +50,11 @@ On the PC launch:
 ```bash
 roslaunch mycobot_moveit mycobot_moveit_control_master_v2.launch
 ```
+
+
+https://user-images.githubusercontent.com/35629121/144708609-14c3878b-ed23-47bf-9bdd-18927d8877e1.mp4
+
+
+
 # License
 This software is released under the MIT License, see LICENSE.txt.

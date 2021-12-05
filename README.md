@@ -5,7 +5,7 @@ This is a forked project of what is developed [here](https://github.com/nisshan-
 # Environment
 | item |  |
 |---|---|
-| OS | Ubuntu 18.04 |
+| OS | Ubuntu 18.04/20.04 |
 | ROS | Melodic/Noetic |
 | Arm Robot | myCobot Pi |
 
